@@ -44,7 +44,7 @@ export default (app) => {
     const isHeroku = process.env.HEROKU;
 
     // Health check endpoint
-    app.get("/", (_, res) => res.status(200).json({ "ISHEROKY": isHeroku == true }));
+    app.get("/", (_, res) => res.status(200).json({ "ISHEROKY": isHeroku }));
 
     // enhance endpoint requests with common parameters like having admin privileges
     // Registering the application's routes

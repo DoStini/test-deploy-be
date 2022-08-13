@@ -11,7 +11,7 @@ const startServer = async () => {
     if (process.env.NODE_ENV !== "test") {
 
         let server = app;
-        const port = 7070;
+        const port = process.env.PORT || 7070;
         server.listen(port, (err) => {
             if (err) {
                 console.error(err);
